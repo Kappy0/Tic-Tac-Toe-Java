@@ -1,6 +1,8 @@
-public class Player {
+public abstract class Player {
     private char symbol;
     private int playerNum;
+
+    public abstract void takeTurn();
 
     public Player(char sym, int num) {
       symbol = sym;
