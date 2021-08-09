@@ -5,8 +5,13 @@ class Main {
     //initialize any global variables needed for the game
 
     //initialize players
+    
 
     //initialize game board
+    char [][] gameBoard = GameUtils.createGameBoard();
+    String finalGameBoard = GameUtils.drawGameBoard(gameBoard);
+
+    System.out.println(finalGameBoard);
 
     //play game
   }

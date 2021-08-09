@@ -3,7 +3,7 @@ public class Human extends Player {
     super(symbol, playerNum);
   }
 
-  public void takeTurn() {
+  public void takeTurn(char[][] gameBoard) {
     System.out.println("Taking human turn...");
   }
 }

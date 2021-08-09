@@ -3,7 +3,7 @@ public class AI extends Player {
     super('O', 2);
   }
 
-  public void takeTurn() {
+  public void takeTurn(char[][] gameBoard) {
     System.out.println("Taking AI turn...");
   }
 }

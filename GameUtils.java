@@ -14,4 +14,35 @@ public class GameUtils {
 
     return board;
   }
+
+  public static String drawGameBoard(char[][] gameBoard) {
+    int boardLength = gameBoard.length;
+    StringBuilder drawnBoard = new StringBuilder();
+
+    for(int i = 0; i < Math.pow(boardLength, 2); i++)
+    {
+      int row = i / boardLength;
+      int column = i % boardLength;
+  
+      if(i == 2 || i == 5 || i == 8)
+      {
+        drawnBoard.append(gameBoard[row][column]);
+    
+        if(i != 8)
+        {
+          drawnBoard.append("\n");
+          drawnBoard.append("---------");
+          drawnBoard.append("\n");
+        }
+      }
+      else
+      {
+        drawnBoard.append(gameBoard[row][column]);
+        drawnBoard.append(" | ");
+      }
+    }
+
+    String finalBoard = drawnBoard.toString();
+    return finalBoard;
+  }
 }
